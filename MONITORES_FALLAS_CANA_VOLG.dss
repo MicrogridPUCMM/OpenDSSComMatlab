@@ -1,0 +1,131 @@
+//MONITORES
+
+New Monitor.MON_4_5     element=Line.LINE_4_5    terminal=1 mode=0 
+New Monitor.MON_4_6     element=Line.LINE_4_6    terminal=1 mode=0
+New Monitor.MON_4_7     element=Line.LINE_4_7    terminal=1 mode=0
+New Monitor.MON_7_10   element=Line.LINE_7_10  terminal=1 mode=0
+New Monitor.MON_10_11 element=Line.LINE_10_11 terminal=1 mode=0
+New Monitor.MON_10_12 element=Line.LINE_10_12 terminal=1 mode=0
+New Monitor.MON_12_13 element=Line.LINE_12_13 terminal=1 mode=0
+New Monitor.MON_12_14 element=Line.LINE_12_14 terminal=1 mode=0
+New Monitor.MON_14_15 element=Line.LINE_14_15 terminal=1 mode=0
+New Monitor.MON_14_16 element=Line.LINE_14_16 terminal=1 mode=0
+New Monitor.MON_14_41 element=Line.LINE_14_41 terminal=1 mode=0
+New Monitor.MON_16_17 element=Line.LINE_16_17 terminal=1 mode=0
+New Monitor.MON_16_18 element=Line.LINE_16_18 terminal=1 mode=0
+New Monitor.MON_18_19 element=Line.LINE_18_19 terminal=1 mode=0
+New Monitor.MON_18_20 element=Line.LINE_18_20 terminal=1 mode=0
+New Monitor.MON_20_21 element=Line.LINE_20_21 terminal=1 mode=0
+New Monitor.MON_20_22 element=Line.LINE_20_22 terminal=1 mode=0
+New Monitor.MON_22_23 element=Line.LINE_22_23 terminal=1 mode=0
+New Monitor.MON_22_24 element=Line.LINE_22_24 terminal=1 mode=0
+New Monitor.MON_24_25 element=Line.LINE_24_25 terminal=1 mode=0
+New Monitor.MON_24_26 element=Line.LINE_24_26 terminal=1 mode=0
+New Monitor.MON_26_27 element=Line.LINE_26_27 terminal=1 mode=0
+New Monitor.MON_26_28 element=Line.LINE_26_28 terminal=1 mode=0
+New Monitor.MON_28_29 element=Line.LINE_28_29 terminal=1 mode=0
+New Monitor.MON_28_30 element=Line.LINE_28_30 terminal=1 mode=0
+New Monitor.MON_30_31 element=Line.LINE_30_31 terminal=1 mode=0
+New Monitor.MON_30_32 element=Line.LINE_30_32 terminal=1 mode=0
+New Monitor.MON_32_33 element=Line.LINE_32_33 terminal=1 mode=0
+New Monitor.MON_32_35 element=Line.LINE_32_35 terminal=1 mode=0
+New Monitor.MON_33_34 element=Line.LINE_33_34 terminal=1 mode=0
+New Monitor.MON_35_36 element=Line.LINE_35_36 terminal=1 mode=0
+New Monitor.MON_35_37 element=Line.LINE_35_37 terminal=1 mode=0
+New Monitor.MON_37_38 element=Line.LINE_37_38 terminal=1 mode=0
+New Monitor.MON_37_39 element=Line.LINE_37_39 terminal=1 mode=0
+New Monitor.MON_37_40 element=Line.LINE_37_40 terminal=1 mode=0
+New Monitor.MON_41_42 element=Line.LINE_41_42 terminal=1 mode=0
+New Monitor.MON_41_43 element=Line.LINE_41_43 terminal=1 mode=0
+New Monitor.MON_43_44 element=Line.LINE_43_44 terminal=1 mode=0
+New Monitor.MON_43_45 element=Line.LINE_43_45 terminal=1 mode=0
+New Monitor.MON_45_46 element=Line.LINE_45_46 terminal=1 mode=0
+New Monitor.MON_45_47 element=Line.LINE_45_47 terminal=1 mode=0
+New Monitor.MON_47_48 element=Line.LINE_47_48 terminal=1 mode=0
+New Monitor.MON_47_49 element=Line.LINE_47_49 terminal=1 mode=0
+New Monitor.MON_47_52 element=Line.LINE_47_52 terminal=1 mode=0
+New Monitor.MON_49_50 element=Line.LINE_49_50 terminal=1 mode=0
+New Monitor.MON_49_51 element=Line.LINE_49_51 terminal=1 mode=0
+New Monitor.MON_52_53 element=Line.LINE_52_53 terminal=1 mode=0
+New Monitor.MON_52_54 element=Line.LINE_52_54 terminal=1 mode=0
+New Monitor.MON_54_55 element=Line.LINE_54_55 terminal=1 mode=0
+New Monitor.MON_54_58 element=Line.LINE_54_58 terminal=1 mode=0
+New Monitor.MON_55_56 element=Line.LINE_55_56 terminal=1 mode=0
+New Monitor.MON_55_57 element=Line.LINE_55_57 terminal=1 mode=0
+New Monitor.MON_58_59 element=Line.LINE_58_59 terminal=1 mode=0
+New Monitor.MON_58_65 element=Line.LINE_58_65 terminal=1 mode=0
+New Monitor.MON_59_60 element=Line.LINE_59_60 terminal=1 mode=0
+New Monitor.MON_59_62 element=Line.LINE_59_62 terminal=1 mode=0
+New Monitor.MON_60_61 element=Line.LINE_60_61 terminal=1 mode=0
+New Monitor.MON_62_63 element=Line.LINE_62_63 terminal=1 mode=0
+New Monitor.MON_63_64 element=Line.LINE_63_64 terminal=1 mode=0
+New Monitor.MON_65_66 element=Line.LINE_65_66 terminal=1 mode=0
+New Monitor.MON_65_68 element=Line.LINE_65_68 terminal=1 mode=0
+New Monitor.MON_66_67 element=Line.LINE_66_67 terminal=1 mode=0
+New Monitor.MON_68_69 element=Line.LINE_68_69 terminal=1 mode=0
+New Monitor.MON_68_70 element=Line.LINE_68_70 terminal=1 mode=0
+New Monitor.MON_70_71 element=Line.LINE_70_71 terminal=1 mode=0
+New Monitor.MON_70_72 element=Line.LINE_70_72 terminal=1 mode=0
+New Monitor.MON_70_73 element=Line.LINE_70_73 terminal=1 mode=0
+New Monitor.MON_73_74 element=Line.LINE_73_74 terminal=1 mode=0
+New Monitor.MON_73_75 element=Line.LINE_73_75 terminal=1 mode=0
+New Monitor.MON_76_77 element=Line.LINE_76_77 terminal=1 mode=0
+New Monitor.MON_76_79 element=Line.LINE_76_79 terminal=1 mode=0
+New Monitor.MON_77_78 element=Line.LINE_77_78 terminal=1 mode=0
+New Monitor.MON_80_81 element=Line.LINE_80_81 terminal=1 mode=0
+New Monitor.MON_80_82 element=Line.LINE_80_82 terminal=1 mode=0
+New Monitor.MON_82_83 element=Line.LINE_82_83 terminal=1 mode=0
+New Monitor.MON_82_84 element=Line.LINE_82_84 terminal=1 mode=0
+New Monitor.MON_84_85 element=Line.LINE_84_85 terminal=1 mode=0
+New Monitor.MON_84_86 element=Line.LINE_84_86 terminal=1 mode=0
+
+//LINEAS ESQUEMA RESILIENCIA
+
+New Monitor.MON_10_41 element=Line.LINE_10_41 terminal=1 mode=0
+New Monitor.MON_24_52 element=Line.LINE_24_52 terminal=1 mode=0
+New Monitor.MON_37_63 element=Line.LINE_37_63 terminal=1 mode=0
+New Monitor.MON_52_70 element=Line.LINE_52_70 terminal=1 mode=0
+New Monitor.MON_63_84 element=Line.LINE_63_84 terminal=1 mode=0
+
+
+//FALLAS
+
+//LL
+
+New Fault.FAULT_LL_1    phases=1 bus1=BUS_MV_10.1 bus2=BUS_MV_10.2 enabled=False
+New Fault.FAULT_LL_2    phases=1 bus1=BUS_MV_14.2 bus2=BUS_MV_14.3 enabled=False
+New Fault.FAULT_LL_3    phases=1 bus1=BUS_MV_20.3 bus2=BUS_MV_20.1 enabled=False
+New Fault.FAULT_LL_4    phases=1 bus1=BUS_MV_24.1 bus2=BUS_MV_24.2 enabled=False
+New Fault.FAULT_LL_5    phases=1 bus1=BUS_MV_30.2 bus2=BUS_MV_30.3 enabled=False
+New Fault.FAULT_LL_6    phases=1 bus1=BUS_MV_35.3 bus2=BUS_MV_35.1 enabled=False
+New Fault.FAULT_LL_7    phases=1 bus1=BUS_MV_41.1 bus2=BUS_MV_41.2 enabled=False
+New Fault.FAULT_LL_8    phases=1 bus1=BUS_MV_45.2 bus2=BUS_MV_45.3 enabled=False
+New Fault.FAULT_LL_9    phases=1 bus1=BUS_MV_49.3 bus2=BUS_MV_49.1 enabled=False
+New Fault.FAULT_LL_10  phases=1 bus1=BUS_MV_54.1 bus2=BUS_MV_54.2 enabled=False
+New Fault.FAULT_LL_11  phases=1 bus1=BUS_MV_59.2 bus2=BUS_MV_59.3 enabled=False
+New Fault.FAULT_LL_12  phases=1 bus1=BUS_MV_65.3 bus2=BUS_MV_65.1 enabled=False
+New Fault.FAULT_LL_13  phases=1 bus1=BUS_MV_70.1 bus2=BUS_MV_70.2 enabled=False
+New Fault.FAULT_LL_14  phases=1 bus1=BUS_MV_75.2 bus2=BUS_MV_75.3 enabled=False
+New Fault.FAULT_LL_15  phases=1 bus1=BUS_MV_80.3 bus2=BUS_MV_80.1 enabled=False
+
+
+//LG
+
+New Fault.FAULT_LG_16    phases=1 bus1=BUS_MV_10.1  enabled=False
+New Fault.FAULT_LG_17    phases=1 bus1=BUS_MV_14.2  enabled=False
+New Fault.FAULT_LG_18    phases=1 bus1=BUS_MV_20.3  enabled=False
+New Fault.FAULT_LG_19    phases=1 bus1=BUS_MV_24.1  enabled=False
+New Fault.FAULT_LG_20    phases=1 bus1=BUS_MV_30.2  enabled=False
+New Fault.FAULT_LG_21    phases=1 bus1=BUS_MV_35.3  enabled=False
+New Fault.FAULT_LG_22    phases=1 bus1=BUS_MV_41.1  enabled=False
+New Fault.FAULT_LG_23    phases=1 bus1=BUS_MV_45.2 enabled=False
+New Fault.FAULT_LG_24    phases=1 bus1=BUS_MV_49.3  enabled=False
+New Fault.FAULT_LG_25    phases=1 bus1=BUS_MV_54.1  enabled=False
+New Fault.FAULT_LG_26    phases=1 bus1=BUS_MV_59.2  enabled=False
+New Fault.FAULT_LG_27    phases=1 bus1=BUS_MV_65.3  enabled=False
+New Fault.FAULT_LG_28    phases=1 bus1=BUS_MV_70.1  enabled=False
+New Fault.FAULT_LG_29    phases=1 bus1=BUS_MV_75.2  enabled=False
+New Fault.FAULT_LG_30    phases=1 bus1=BUS_MV_80.3  enabled=False
+
+
+

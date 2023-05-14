@@ -1,0 +1,238 @@
+//WIRE DATA
+
+//ACSR 
+
+New WireData.ACSR_4/0     Rac=0.119      Runits=kft 	GMR=0.0180 		GMRunits=ft 	DIAM=0.563		Radunits=in		Normamps=357
+
+//AAAC
+		
+New WireData.AAAC_1/0     Rac=0.1947		Runits=kft 		GMR=0.0120		GMRunits=ft		DIAM=0.398	Radunits=in 	Normamps=256
+								
+New WireData.AAAC_2/0     Rac=0.1545		Runits=kft 		GMR=0.0135		GMRunits=ft		DIAM=0.447	Radunits=in 	Normamps=296
+																				
+New WireData.AAAC_4/0     Rac=0.0973		Runits=kft 		GMR=0.0170		GMRunits=ft		DIAM=0.563	Radunits=in 	Normamps=395										
+										
+New WireData.AAAC_465    Rac=0.0447		Runits=kft 		GMR=0.0254		GMRunits=ft		DIAM=0.795	Radunits=in 	Normamps=610
+
+//URD CU
+
+New CNData.CU_15kV_2	Normamps=160	Runits=kft	Rdc=0.159	Rstrand=2.525	GMRUnits=in	GMR=0.106	GmrStrand=0.0250	Radunits=in	DIAM=0.284	DiaIns=0.68	InsLayer=0.175	DiaStrand=0.0641	DiaCable=0.99	EpsR=2.3	k=6
+
+//GEOMETRIA
+
+//LINE SPACING
+
+//PARA ALTA TENSION
+
+new LineSpacing.3F_HV nconds=4 nphases=3 units=m x=[0 0 0 ] h=[15 17 19 21]
+
+
+//PARA MEDIA TENSION (TOMANDO COMO REFERENCIA ESTRUCTURA MT-301, SE PUEDEN AGREGAR MAS) 
+
+new LineSpacing.3F_4WIRE nconds=4 nphases=3 units=m x=[-0.95 0 0.676 0] h=[12 12 12 9]
+
+//LINE GEOMETRIES
+
+//PARA ALTA TENSION
+
+New Linegeometry.3F_HV_3_ACSR_4/0    nconds=4 nphases=3 spacing=3F_HV  wires= [ACSR_4/0  ACSR_4/0 ACSR_4/0 AAAC_1/0] Reduce=Y
+
+//MT
+
+New Linegeometry.3F_MV_3_AAAC_1/0    nconds=4 nphases=3 spacing=3F_4WIRE  wires= [AAAC_1/0  AAAC_1/0 AAAC_1/0 AAAC_2/0] Reduce=Y
+New Linegeometry.3F_MV_3_AAAC_2/0    nconds=4 nphases=3 spacing=3F_4WIRE  wires= [AAAC_2/0  AAAC_2/0 AAAC_2/0 AAAC_2/0] Reduce=Y
+New Linegeometry.3F_MV_3_AAAC_4/0    nconds=4 nphases=3 spacing=3F_4WIRE  wires= [AAAC_4/0  AAAC_4/0 AAAC_4/0 AAAC_2/0] Reduce=Y
+New Linegeometry.3F_MV_3_AAAC_465    nconds=4 nphases=3 spacing=3F_4WIRE  wires= [AAAC_465  AAAC_465 AAAC_465 AAAC_2/0] Reduce=Y
+
+//MT URD
+
+New Linegeometry.3F_MV_3_URD_2     nconds=3 nphases=3   units=m
+~ cond=1 cncable=CU_15kV_2  x=-0.3   h=-1.8
+~ cond=2 cncable=CU_15kV_2  x=0       h=-1.5
+~ cond=3 cncable=CU_15kV_2  x=0.3    h=-1.8
+
+
+
+//CREACION DE LAS LINEAS
+
+//LAS LINEAS SE CODIFICARAN EN ORDEN DE LAS BARRAS 
+
+//HV
+
+new line.LINE_0_1    bus1=sourcebus.1.2.3       bus2=BUS_HV_1.1.2.3 geometry=3F_HV_3_ACSR_4/0 length=2700     units=m switch=y
+
+new line.LINE_1_2    bus1=BUS_HV_1.1.2.3      bus2=BUS_HV_2.1.2.3 geometry=3F_HV_3_ACSR_4/0 length=3550     units=m switch=y
+
+new line.LINE_2_3    bus1=BUS_HV_2.1.2.3      bus2=BUS_HV_3.1.2.3 geometry=3F_HV_3_ACSR_4/0 length=760       units=m switch=y
+
+//MV
+
+//MICROGRID 1
+
+new line.LINE_4_5    bus1=BUS_MV_4.1.2.3     bus2=BUS_MV_5.1.2.3 geometry=3F_MV_3_AAAC_465 length=10   units=m switch=y
+new line.LINE_4_6    bus1=BUS_MV_4.1.2.3     bus2=BUS_MV_6.1.2.3 geometry=3F_MV_3_AAAC_465 length=10   units=m switch=y
+new line.LINE_4_7   bus1=BUS_MV_4.1.2.3     bus2=BUS_MV_7.1.2.3 geometry=3F_MV_3_AAAC_465 length=10   units=m switch=y
+
+new line.LINE_7_10    bus1=BUS_MV_7.1.2.3     bus2=BUS_MV_10.1.2.3 geometry=3F_MV_3_AAAC_465 length=1754   units=m switch=y
+
+new line.LINE_10_11  bus1=BUS_MV_10.1.2.3   bus2=BUS_MV_11.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=46      units=m switch=y
+new line.LINE_10_12  bus1=BUS_MV_10.1.2.3   bus2=BUS_MV_12.1.2.3 geometry=3F_MV_3_AAAC_465  length=45      units=m switch=y
+
+new line.LINE_12_13  bus1=BUS_MV_12.1.2.3   bus2=BUS_MV_13.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=203     units=m switch=y
+new line.LINE_12_14  bus1=BUS_MV_12.1.2.3   bus2=BUS_MV_14.1.2.3 geometry=3F_MV_3_AAAC_465  length=30       units=m switch=y
+
+new line.LINE_14_15  bus1=BUS_MV_14.1.2.3   bus2=BUS_MV_15.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=235     units=m switch=y
+new line.LINE_14_16  bus1=BUS_MV_14.1.2.3   bus2=BUS_MV_16.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=95       units=m switch=y
+
+new line.LINE_14_41  bus1=BUS_MV_14.1.2.3   bus2=BUS_MV_41.1.2.3 geometry=3F_MV_3_AAAC_465  length=215     units=m switch=y //LINE_MG1_MG3
+
+new line.LINE_16_17  bus1=BUS_MV_16.1.2.3   bus2=BUS_MV_17.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=439     units=m switch=y
+new line.LINE_16_18  bus1=BUS_MV_16.1.2.3   bus2=BUS_MV_18.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=125     units=m switch=y
+
+new line.LINE_18_19  bus1=BUS_MV_18.1.2.3   bus2=BUS_MV_19.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=428     units=m switch=y
+new line.LINE_18_20  bus1=BUS_MV_18.1.2.3   bus2=BUS_MV_20.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=192     units=m switch=y
+
+new line.LINE_20_21  bus1=BUS_MV_20.1.2.3   bus2=BUS_MV_21.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=200     units=m switch=y
+new line.LINE_20_22  bus1=BUS_MV_20.1.2.3   bus2=BUS_MV_22.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=184     units=m switch=y
+
+new line.LINE_22_23  bus1=BUS_MV_22.1.2.3   bus2=BUS_MV_23.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=536     units=m switch=y
+new line.LINE_22_24  bus1=BUS_MV_22.1.2.3   bus2=BUS_MV_24.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=25       units=m switch=y
+
+new line.LINE_24_25  bus1=BUS_MV_24.1.2.3   bus2=BUS_MV_25.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=446    units=m switch=y
+new line.LINE_24_26  bus1=BUS_MV_24.1.2.3   bus2=BUS_MV_26.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=18      units=m switch=y // LINE_MG1_MG2
+
+//MICROGRID 2
+
+new line.LINE_26_27  bus1=BUS_MV_26.1.2.3   bus2=BUS_MV_27.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=350     units=m switch=y
+new line.LINE_26_28  bus1=BUS_MV_26.1.2.3   bus2=BUS_MV_28.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=88       units=m switch=y
+
+new line.LINE_28_29  bus1=BUS_MV_28.1.2.3   bus2=BUS_MV_29.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=161     units=m switch=y
+new line.LINE_28_30  bus1=BUS_MV_28.1.2.3   bus2=BUS_MV_30.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=84       units=m switch=y
+
+new line.LINE_30_31  bus1=BUS_MV_30.1.2.3   bus2=BUS_MV_31.1.2.3 geometry=3F_MV_3_URD_2       length=148     units=m switch=y
+new line.LINE_30_32  bus1=BUS_MV_30.1.2.3   bus2=BUS_MV_32.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=87       units=m switch=y
+
+new line.LINE_32_33  bus1=BUS_MV_32.1.2.3   bus2=BUS_MV_33.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=434     units=m switch=y
+new line.LINE_32_35  bus1=BUS_MV_32.1.2.3   bus2=BUS_MV_35.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=266       units=m switch=y
+
+new line.LINE_33_34  bus1=BUS_MV_33.1.2.3   bus2=BUS_MV_34.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=362     units=m switch=y
+
+new line.LINE_35_36  bus1=BUS_MV_35.1.2.3   bus2=BUS_MV_36.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=223       units=m switch=y
+new line.LINE_35_37  bus1=BUS_MV_35.1.2.3   bus2=BUS_MV_37.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=74        units=m switch=y
+
+new line.LINE_37_38  bus1=BUS_MV_37.1.2.3   bus2=BUS_MV_38.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=652     units=m switch=y
+new line.LINE_37_39  bus1=BUS_MV_37.1.2.3   bus2=BUS_MV_39.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=715     units=m switch=y
+new line.LINE_37_40  bus1=BUS_MV_37.1.2.3   bus2=BUS_MV_40.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=506       units=m switch=y
+
+//MICROGRID 3
+
+new line.LINE_41_42  bus1=BUS_MV_41.1.2.3   bus2=BUS_MV_42.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=403     units=m switch=y
+new line.LINE_41_43  bus1=BUS_MV_41.1.2.3   bus2=BUS_MV_43.1.2.3 geometry=3F_MV_3_AAAC_465  length=555     units=m switch=y
+
+new line.LINE_43_44  bus1=BUS_MV_43.1.2.3   bus2=BUS_MV_44.1.2.3 geometry=3F_MV_3_AAAC_1/0  length=800     units=m switch=y
+new line.LINE_43_45  bus1=BUS_MV_43.1.2.3   bus2=BUS_MV_45.1.2.3 geometry=3F_MV_3_AAAC_465  length=75      units=m switch=y
+
+new line.LINE_45_46  bus1=BUS_MV_43.1.2.3   bus2=BUS_MV_46.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=441       units=m switch=y
+new line.LINE_45_47  bus1=BUS_MV_45.1.2.3   bus2=BUS_MV_47.1.2.3 geometry=3F_MV_3_AAAC_465  length=178       units=m switch=y
+
+new line.LINE_47_48  bus1=BUS_MV_47.1.2.3   bus2=BUS_MV_48.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=333     units=m switch=y
+new line.LINE_47_49  bus1=BUS_MV_47.1.2.3   bus2=BUS_MV_49.1.2.3 geometry=3F_MV_3_URD_2       length=196     units=m switch=y
+new line.LINE_47_52  bus1=BUS_MV_47.1.2.3   bus2=BUS_MV_52.1.2.3 geometry=3F_MV_3_AAAC_465  length=164     units=m switch=y
+
+new line.LINE_49_50  bus1=BUS_MV_49.1.2.3   bus2=BUS_MV_50.1.2.3 geometry=3F_MV_3_URD_2       length=619     units=m switch=y
+new line.LINE_49_51  bus1=BUS_MV_49.1.2.3   bus2=BUS_MV_51.1.2.3 geometry=3F_MV_3_URD_2       length=666     units=m switch=y
+
+new line.LINE_52_53  bus1=BUS_MV_52.1.2.3   bus2=BUS_MV_53.1.2.3 geometry=3F_MV_3_URD_2       length=423     units=m switch=y
+new line.LINE_52_54  bus1=BUS_MV_52.1.2.3   bus2=BUS_MV_54.1.2.3 geometry=3F_MV_3_AAAC_465  length=387     units=m switch=y //LINE_MG3_MG4
+
+//MICROGRID 4
+
+new line.LINE_54_55  bus1=BUS_MV_54.1.2.3   bus2=BUS_MV_55.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=518     units=m switch=y
+new line.LINE_54_58  bus1=BUS_MV_54.1.2.3   bus2=BUS_MV_58.1.2.3 geometry=3F_MV_3_AAAC_465  length=240     units=m switch=y
+
+new line.LINE_55_56  bus1=BUS_MV_55.1.2.3   bus2=BUS_MV_56.1.2.3 geometry=3F_MV_3_URD_2       length=400     units=m switch=y
+new line.LINE_55_57  bus1=BUS_MV_55.1.2.3   bus2=BUS_MV_57.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=475     units=m switch=y
+
+new line.LINE_58_59  bus1=BUS_MV_58.1.2.3   bus2=BUS_MV_59.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=70       units=m switch=y
+
+new line.LINE_58_65  bus1=BUS_MV_58.1.2.3   bus2=BUS_MV_65.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=30       units=m switch=y //LINE_MG4_MG5
+
+new line.LINE_59_60  bus1=BUS_MV_59.1.2.3   bus2=BUS_MV_60.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=418     units=m switch=y
+new line.LINE_59_62  bus1=BUS_MV_59.1.2.3   bus2=BUS_MV_62.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=572     units=m switch=y
+
+new line.LINE_60_61  bus1=BUS_MV_60.1.2.3   bus2=BUS_MV_61.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=330     units=m switch=y
+
+new line.LINE_62_63  bus1=BUS_MV_62.1.2.3   bus2=BUS_MV_63.1.2.3 geometry=3F_MV_3_URD_2       length=770     units=m switch=y
+
+new line.LINE_63_64  bus1=BUS_MV_63.1.2.3   bus2=BUS_MV_64.1.2.3 geometry=3F_MV_3_URD_2       length=800     units=m switch=y
+
+//MICROGRID 5
+
+new line.LINE_65_66  bus1=BUS_MV_65.1.2.3   bus2=BUS_MV_66.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=567     units=m switch=y
+new line.LINE_65_68  bus1=BUS_MV_65.1.2.3   bus2=BUS_MV_68.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=274     units=m switch=y
+
+new line.LINE_66_67  bus1=BUS_MV_66.1.2.3   bus2=BUS_MV_67.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=567     units=m switch=y
+
+new line.LINE_68_69  bus1=BUS_MV_68.1.2.3   bus2=BUS_MV_69.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=744     units=m switch=y
+new line.LINE_68_70  bus1=BUS_MV_68.1.2.3   bus2=BUS_MV_70.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=329     units=m switch=y
+
+new line.LINE_70_71  bus1=BUS_MV_70.1.2.3   bus2=BUS_MV_71.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=679       units=m switch=y
+new line.LINE_70_72  bus1=BUS_MV_70.1.2.3   bus2=BUS_MV_72.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=2000     units=m switch=y
+new line.LINE_70_73  bus1=BUS_MV_70.1.2.3   bus2=BUS_MV_73.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=538       units=m switch=y //LINE_MG5_MG6
+
+//MICROGRID 6
+
+new line.LINE_73_74  bus1=BUS_MV_73.1.2.3   bus2=BUS_MV_74.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=600       units=m switch=y 
+new line.LINE_73_75  bus1=BUS_MV_73.1.2.3   bus2=BUS_MV_75.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=484       units=m switch=y
+
+new line.LINE_75_76  bus1=BUS_MV_75.1.2.3   bus2=BUS_MV_76.1.2.3 geometry=3F_MV_3_AAAC_4/0  length=804       units=m switch=y
+new line.LINE_75_80  bus1=BUS_MV_75.1.2.3   bus2=BUS_MV_80.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=1435       units=m switch=y
+
+new line.LINE_76_77  bus1=BUS_MV_76.1.2.3   bus2=BUS_MV_77.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=557       units=m switch=y
+new line.LINE_76_79  bus1=BUS_MV_76.1.2.3   bus2=BUS_MV_79.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=1036     units=m switch=y
+
+new line.LINE_77_78  bus1=BUS_MV_77.1.2.3   bus2=BUS_MV_78.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=867       units=m switch=y
+
+new line.LINE_80_81  bus1=BUS_MV_80.1.2.3   bus2=BUS_MV_81.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=475       units=m switch=y
+new line.LINE_80_82  bus1=BUS_MV_80.1.2.3   bus2=BUS_MV_82.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=315       units=m switch=y
+
+new line.LINE_82_83  bus1=BUS_MV_82.1.2.3   bus2=BUS_MV_83.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=1200     units=m switch=y
+new line.LINE_82_84  bus1=BUS_MV_83.1.2.3   bus2=BUS_MV_84.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=479       units=m switch=y
+
+new line.LINE_84_85  bus1=BUS_MV_84.1.2.3   bus2=BUS_MV_85.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=1442     units=m switch=y
+new line.LINE_84_86  bus1=BUS_MV_84.1.2.3   bus2=BUS_MV_86.1.2.3 geometry=3F_MV_3_AAAC_2/0  length=313       units=m switch=y
+
+//INTERCONEXION DE MICRORREDES
+
+new line.LINE_10_41    bus1=BUS_MV_10.1.2.3     bus2=BUS_MV_41.1.2.3 geometry=3F_MV_3_AAAC_465 length=100   units=m switch=y // LINE_SENI_MG3
+new line.LINE_24_52    bus1=BUS_MV_24.1.2.3     bus2=BUS_MV_52.1.2.3 geometry=3F_MV_3_AAAC_465 length=2000   units=m switch=y // LINE_MG1_MG3
+new line.LINE_52_70    bus1=BUS_MV_52.1.2.3     bus2=BUS_MV_70.1.2.3 geometry=3F_MV_3_AAAC_465 length=1500   units=m switch=y // LINE_MG3_MG5
+new line.LINE_37_63    bus1=BUS_MV_37.1.2.3     bus2=BUS_MV_63.1.2.3 geometry=3F_MV_3_AAAC_465 length=5000   units=m switch=y // LINE_MG2_MG4
+new line.LINE_63_84    bus1=BUS_MV_63.1.2.3     bus2=BUS_MV_84.1.2.3 geometry=3F_MV_3_AAAC_465 length=4000   units=m switch=y // LINE_MG4_MG6
+
+open line.LINE_10_41
+open line.LINE_24_52
+open line.LINE_37_63
+open line.LINE_52_70
+open line.LINE_63_84
+
+open line.LINE_24_26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

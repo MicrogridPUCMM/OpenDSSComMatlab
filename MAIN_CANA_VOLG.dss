@@ -1,0 +1,29 @@
+//FLUJO DE POTENCIA
+Clear 
+new circuit.CANA_VOLG basekV=69 pu=1.00 angle=0 frequency=60 phases=3
+
+redirect LINEAS_CANA_VOLG.dss
+redirect TRANSFORMADORES_CANA_VOLG.dss
+redirect CARGASBT_CANA_VOLG.dss
+redirect MONITORES_FALLAS_CANA_VOLG.dss
+
+set voltagebases = [69, 12.47, 0.240]
+calcvoltagebases
+
+solve mode = daily number = 1 
+Solve
+
+//show voltages ll
+//show currents
+
+
+!plot voltages
+//set emergvminpu=0.85
+//set normvminpu=0.9
+//plot circuit voltage
+
+!plot profile
+//Set normvmaxpu=1.10
+//set normvminpu=0.90
+//plot profile phases = primary
+//plot profile phases = all

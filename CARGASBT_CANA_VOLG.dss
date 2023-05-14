@@ -1,0 +1,61 @@
+//CARGAS BT VOLG
+
+new   load.LOAD_LV_TRT1      bus1=BUS_LV_87.1.2.3     phases = 3    kV=0.240            kW=60  kVAR=0              model=1   conn=delta     status=fixed      
+new   load.LOAD_LV_TRT2      bus1=BUS_LV_88.1.2.3     phases = 3    kV=0.240            kW=350 kVAR=0             model=1   conn=delta   status=fixed        
+new   load.LOAD_LV_TRT3      bus=BUS_LV_89.1.2.3     phases = 3      kV=0.240            kW=704   kVAR=0     model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT4      bus1=BUS_LV_90.1.2.3     phases = 3    kV=0.240            kW=570   kVAR=0   model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT5      bus1=BUS_LV_91.1.2.3     phases = 3    kV=0.240            kW=540   kVAR=0   model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT6      bus1=BUS_LV_92.1.2.3     phases = 3    kV=0.240            kW=400   kVAR=0   model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT7      bus1=BUS_LV_93.1.2.3     phases = 3    kV=0.240            kW=1190   kVAR=0   model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT8      bus1=BUS_LV_94.1.2.3     phases = 3    kV=0.240            kW=570   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT9      bus1=BUS_LV_95.1.2.3     phases = 3    kV=0.240            kW=740   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT10    bus1=BUS_LV_96.1.2.3     phases = 3    kV=0.240            kW=342   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT11    bus1=BUS_LV_97.1.2.3     phases = 3    kV=0.240            kW=340     kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT12    bus1=BUS_LV_98.1.2.3     phases = 3    kV=0.240            kW=402   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT13    bus1=BUS_LV_99.1.2.3     phases = 3    kV=0.240            kW=520   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT14    bus1=BUS_LV_100.1.2.3   phases = 3    kV=0.240            kW=1690   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT15    bus1=BUS_LV_101.1.2.3   phases = 3    kV=0.240            kW=850   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT16    bus1=BUS_LV_102.1.2.3   phases = 3    kV=0.240            kW=442   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT17    bus1=BUS_LV_103.1.2.3   phases = 3    kV=0.240            kW=1730   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT18    bus1=BUS_LV_104.1.2.3   phases = 3    kV=0.240            kW=1390   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT19    bus1=BUS_LV_105.1.2.3   phases = 3    kV=0.240            kW=380   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT20    bus1=BUS_LV_106.1.2.3   phases = 3    kV=0.240            kW=220   kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT21    bus1=BUS_LV_107.1.2.3   phases = 3    kV=0.240            kW=268   kVAR=0 model=1   conn=delta   status=fixed   
+new   load.LOAD_LV_TRT22    bus1=BUS_LV_108.1.2.3   phases = 3    kV=0.240            kW=590  kVAR=0  model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT23    bus1=BUS_LV_109.1.2.3   phases = 3    kV=0.240            kW=860  kVAR=0  model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT24    bus1=BUS_LV_110.1.2.3   phases = 3    kV=0.240            kW=1380  kVAR=0  model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT25    bus1=BUS_LV_111.1.2.3   phases = 3    kV=0.240            kW=1900  kVAR=0  model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT26    bus1=BUS_LV_112.1.2.3   phases = 3    kV=0.240            kW=380  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT27    bus1=BUS_LV_113.1.2.3   phases = 3    kV=0.240            kW=1034  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT28    bus1=BUS_LV_114.1.2.3   phases = 3    kV=0.240            kW=892  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT29    bus1=BUS_LV_115.1.2.3  phases = 3     kV=0.240            kW=640  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT30   bus1=BUS_LV_116.1.2.3   phases = 3     kV=0.240            kW=880  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT31   bus1=BUS_LV_117.1.2.3   phases = 3     kV=0.240            kW=840  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT32   bus1=BUS_LV_118.1.2.3   phases = 3     kV=0.240            kW=550  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT33   bus1=BUS_LV_119.1.2.3   phases = 3     kV=0.240            kW=634  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT34   bus1=BUS_LV_120.1.2.3   phases = 3     kV=0.240            kW=702  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT35   bus1=BUS_LV_121.1.2.3   phases = 3     kV=0.240            kW=410  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT36   bus1=BUS_LV_122.1.2.3   phases = 3     kV=0.240            kW=1172  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT37   bus1=BUS_LV_123.1.2.3   phases = 3     kV=0.240            kW=910  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT38   bus1=BUS_LV_124.1.2.3  phases = 3      kV=0.240            kW=730  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT39    bus1=BUS_LV_125.1.2.3  phases = 3     kV=0.240            kW=2636  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT40   bus1=BUS_LV_126.1.2.3  phases = 3      kV=0.240            kW=1064  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT41   bus1=BUS_LV_127.1.2.3  phases = 3      kV=0.240            kW=910  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT42     bus1=BUS_LV_128.1.2.3 phases = 3     kV=0.240            kW=420  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT43    bus1=BUS_LV_129.1.2.3  phases = 3     kV=0.240            kW=260  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT44   bus1=BUS_LV_130.1.2.3  phases = 3      kV=0.240            kW=240  kVAR=0 model=1   conn=delta   status=fixed  
+new   load.LOAD_LV_TRT45    bus1=BUS_LV_131.1.2.3  phases = 3     kV=0.240            kW=640  kVAR=0 model=1   conn=delta   status=fixed  
+
+//OTRAS CARGAS
+
+new   load.LOAD_LV_TRTVOLG102    bus1=BUS_LV_8.1.2.3  phases = 3     kV=0.240            kW=8000  kVAR=0 model=1   conn=delta   status=fixed
+new   load.LOAD_LV_TRTVOLG103    bus1=BUS_LV_9.1.2.3  phases = 3     kV=0.240            kW=8000  kVAR=0 model=1   conn=delta   status=fixed
+
+new   load.LOAD_MV_HOMS   bus1=BUS_MV_HOMS.1.2.3  phases = 3     kV=12.47            kW=5600  kVAR=0 model=1   conn=delta   status=fixed
+new   load.LOAD_MV_UMED   bus1=BUS_MV_UMED.1.2.3  phases = 3     kV=12.47            kW=4000  kVAR=0 model=1   conn=delta   status=fixed
+
+
+
+
+
+

@@ -1,0 +1,209 @@
+//TRANSFORMADORES DIAGRAMA UNIFILAR CANABACOA-VOLG
+
+//TRANSFORMADORES DE ALTA TENSION 69kV/12.47 kV
+
+//TRANSFORMADOR HOMS
+
+new transformer.HOMS  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_HV_1.1.2.3 BUS_MV_HOMS.1.2.3] conns=[delta wye] kvs=[69 12.47] kvas=[7000 7000] xhl=8 %rs=[0.50 0.50] taps=[1 1] 
+
+//TRANSFORMADOR UMED
+
+new transformer.UMED  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_HV_3.1.2.3 BUS_MV_UMED.1.2.3] conns=[delta wye] kvs=[69 12.47] kvas=[5000 5000] xhl=8 %rs=[0.50 0.50] taps=[1 1] 
+
+//TRANSFORMADOR VOLG
+
+new transformer.VOLG  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_HV_2.1.2.3 BUS_MV_4.1.2.3] conns=[delta wye] kvs=[69 12.47] kvas=[37000 37000] xhl=8 %rs=[0.50 0.50] taps=[1 1]
+
+
+//TRANSFORMADORES DE MEDIA TENSION 12.47 kV/240 V
+
+//VOLG102
+
+new transformer.VOLG_102  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_5.1.2.3 BUS_LV_8.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[10000 10000] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//VOLG103
+
+new transformer.VOLG_103  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_6.1.2.3 BUS_LV_9.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[10000 10000] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT1
+
+new transformer.TRT_1  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_11.1.2.3 BUS_LV_87.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[75 75] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+
+//TRT2
+
+new transformer.TRT_2  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_13.1.2.3 BUS_LV_88.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[437.5 437.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT3
+
+new transformer.TRT_3  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_15.1.2.3 BUS_LV_89.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[880 880] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT4
+
+new transformer.TRT_4  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_17.1.2.3 BUS_LV_90.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[712.5 712.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT5
+
+new transformer.TRT_5  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_19.1.2.3 BUS_LV_91.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[675 675] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT6
+
+new transformer.TRT_6  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_21.1.2.3 BUS_LV_92.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[500 500] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT7
+
+new transformer.TRT_7  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_23.1.2.3 BUS_LV_93.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1487.5 1487.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT8
+
+new transformer.TRT_8  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_25.1.2.3 BUS_LV_94.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[712.5 712.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT9
+
+new transformer.TRT_9  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_27.1.2.3 BUS_LV_95.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[925 925] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT10
+
+new transformer.TRT_10  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_29.1.2.3 BUS_LV_96.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[427.5 427.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT11
+
+new transformer.TRT_11  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_31.1.2.3 BUS_LV_97.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[425 425] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT12
+
+new transformer.TRT_12  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_33.1.2.3 BUS_LV_98.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[502.5 502.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT13
+
+new transformer.TRT_13  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_34.1.2.3 BUS_LV_99.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[650 650] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT14
+
+new transformer.TRT_14  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_36.1.2.3 BUS_LV_100.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[2112.5 2112.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT15
+
+new transformer.TRT_15  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_38.1.2.3 BUS_LV_101.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1062.5 1062.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT16
+
+new transformer.TRT_16  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_39.1.2.3 BUS_LV_102.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[552.5 552.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT17
+
+new transformer.TRT_17  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_40.1.2.3 BUS_LV_103.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[2162.5 2162.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT18
+
+new transformer.TRT_18  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_42.1.2.3 BUS_LV_104.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1737.5 1737.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT19
+
+new transformer.TRT_19  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_44.1.2.3 BUS_LV_105.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[475 475] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT20
+
+new transformer.TRT_20  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_46.1.2.3 BUS_LV_106.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[275 275] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT21
+
+new transformer.TRT_21  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_48.1.2.3 BUS_LV_107.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[335 335] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT22
+
+new transformer.TRT_22 phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_50.1.2.3 BUS_LV_108.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[737.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT23
+
+new transformer.TRT_23  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_51.1.2.3 BUS_LV_109.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1075 1075] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT24
+
+new transformer.TRT_24  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_53.1.2.3 BUS_LV_110.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1725 1725] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT25
+
+new transformer.TRT_25  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_55.1.2.3 BUS_LV_111.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[2375 2375] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT26
+
+new transformer.TRT_26  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_56.1.2.3 BUS_LV_112.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[475 475] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT27
+
+new transformer.TRT_27  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_57.1.2.3 BUS_LV_113.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1292.5 1292.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT28
+
+new transformer.TRT_28  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_60.1.2.3 BUS_LV_114.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1115 1115] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT29
+
+new transformer.TRT_29  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_61.1.2.3 BUS_LV_115.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[800 800] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT30
+
+new transformer.TRT_30  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_62.1.2.3 BUS_LV_116.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1100 1100] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT31
+
+new transformer.TRT_31  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_63.1.2.3 BUS_LV_117.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1050 1050] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT32
+
+new transformer.TRT_32  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_64.1.2.3 BUS_LV_118.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[687.5 687.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT33
+
+new transformer.TRT_33  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_66.1.2.3 BUS_LV_119.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[792.5 792.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT34
+
+new transformer.TRT_34  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_67.1.2.3 BUS_LV_120.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[877.5 877.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT35
+
+new transformer.TRT_35  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_69.1.2.3 BUS_LV_121.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[512.5 512.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT36
+
+new transformer.TRT_36  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_71.1.2.3 BUS_LV_122.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1465 1465] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT37
+
+new transformer.TRT_37  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_72.1.2.3 BUS_LV_123.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1137.5 1137.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT38
+
+new transformer.TRT_38  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_74.1.2.3 BUS_LV_124.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[912.5 912.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT39
+
+new transformer.TRT_39  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_76.1.2.3 BUS_LV_125.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[3295 3295] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT40
+
+new transformer.TRT_40  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_78.1.2.3 BUS_LV_126.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[1330 1330] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT41
+
+new transformer.TRT_41  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_79.1.2.3 BUS_LV_127.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[712.5 712.5] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT42
+
+new transformer.TRT_42  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_81.1.2.3 BUS_LV_128.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[525 525] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT43
+
+new transformer.TRT_43  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_83.1.2.3 BUS_LV_129.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[325 325] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT44
+
+new transformer.TRT_44  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_85.1.2.3 BUS_LV_130.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[300 300] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+//TRT45
+
+new transformer.TRT_45  phases=3 windings=2 %noloadloss=0.3 %imag=1.2 buses=[BUS_MV_86.1.2.3 BUS_LV_131.1.2.3] conns=[wye delta] kvs=[12.47 0.240] kvas=[800 800] xhl=8 %rs=[0.50 1.10] taps=[1 1] 
+
+

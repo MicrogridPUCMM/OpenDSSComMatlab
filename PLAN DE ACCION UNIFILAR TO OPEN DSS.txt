@@ -1,0 +1,50 @@
+Plan de acción:
+
+-Crear un archivo .dss para:
+
+1. Transformadores (Crear todos los transformadores)
+2. Líneas (tener en cuenta la colocación de los interruptores "switch=y")
+3. Cargas 
+4. Generación fotovoltaica
+
+5. Un archivo general donde se utilize "redirect" de cada uno de los archivos (1-4)
+
+	-En este archivo colocar monitores y correr un flujo de potencia snapshot.
+
+LUEGO CUADRAR CON JUSTIN PARA CUALQUIER DETALLE NECESARIO EN LA IMPLEMENTACION DEL ALGORITMO DETECTOR DE FALLAS
+
+CARACTERISTICAS DE NOMBRES VARIABLES:
+
+TRANSFORMADORES:
+
+"HOMS" - Subestación Homs
+"UMED" - Subestación Unión Médica
+"VOLG" - Subestación Villa olga
+
+"TRT_N" - Transformador teórico N
+
+BUSES:
+
+Todos los buses tienen la siguiente nomenclatura:
+
+"BUS_[L,M o H]V_[N]"
+
+Donde se indica el tipo de tensión y la numeración de la barra por ejemplo:
+
+"BUS_HV_1", "BUS_MV_2" o "BUS_LV_3"
+
+LINEAS:
+
+"LINE_[BUS1]_[BUS2]"
+
+Ejemplo:
+
+La linea que va del BUS_HV_0 al BUS_HV_1 se llama:
+
+"LINE_0_1" si va del bus 40 al 42 se llama "LINE_40_42"
+
+-MONITORES EN CADA LINEA
+
+-DISTRIBUIR 30 FALLAS ENTRE LOS BUSES (LT y LL)
+
+-DIVIDIR LAS MICRORREDES y CREAR LAS LINEAS DE MALLA (CARACTERISTICAS LONGITUD REAL ENTRE BUSES [GIS])
